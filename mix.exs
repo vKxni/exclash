@@ -4,7 +4,7 @@ defmodule CocClient.MixProject do
   def project do
     [
       app: :coc_client,
-      version: "1.1.0",
+      version: "1.0.0",
       description: "A Wrapper around the Clash of Clans APi",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
