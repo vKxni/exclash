@@ -42,4 +42,4 @@ API_KEY=your_api_key_here
 - API key (with your real ip): [Clash of Clans APi](https://developer.clashofclans.com/#/)
 
 Want to test it without direct installation?
-Check out the [Example]()
+Check out the [Example](https://github.com/vKxni/exclash/blob/master/example/lib/backend.ex)
