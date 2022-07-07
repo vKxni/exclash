@@ -4,10 +4,13 @@ defmodule CocClient.MixProject do
   def project do
     [
       app: :coc_client,
-      version: "0.1.0",
+      version: "1.1.0",
+      description: "A Wrapper around the Clash of Clans APi",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      package: package(),
+      deps: deps(),
+      name: "coc_client"
     ]
   end
 
@@ -15,7 +18,7 @@ defmodule CocClient.MixProject do
   def application do
     [
       applications: [:httpoison],
-      extra_applications: [:logger]
+      extra_applications: [:logger, :poison]
     ]
   end
 
@@ -24,7 +27,17 @@ defmodule CocClient.MixProject do
     [
       {:httpoison, "~> 1.8"},
       {:poison, "~> 3.1"},
-      {:dotenv_parser, "~> 2.0"}
+      {:dotenv_parser, "~> 2.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
+  end
+
+  defp package() do
+    [
+      name: "coc_client",
+      files: ~w(lib config),
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/vKxni/exclash"}
     ]
   end
 end

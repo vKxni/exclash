@@ -6,11 +6,11 @@ defmodule CocClient.API do
   def player(tag), do: get!("players/#{URI.encode_www_form(tag)}")
   def clan(tag), do: get!("clans/#{URI.encode_www_form(tag)}")
 
-  defp process_request_url(url), do: @base_url <> url
+  def process_request_url(url), do: @base_url <> url
 
-  defp process_request_headers(headers), do:
+  def process_request_headers(headers), do:
     headers ++ ["Authorization": "Bearer #{api_key()}", "Accept": "application/json"]
 
-  defp process_response_body(body), do: Poison.decode!(body)
-  defp api_key(), do: Application.fetch_env!(:coc_client, :api_key)
+  def process_response_body(body), do: Poison.decode!(body)
+  defp api_key(), do: Application.fetch_env!(:exclash, :api_key)
 end
