@@ -5,7 +5,7 @@ An APi Wrapper for Clash of Clans, written in Elixir.
 ## Installation
 
 The package can be installed
-by adding `exclash` to your list of dependencies in `mix.exs`:
+by adding `coc_client` to your list of dependencies in `mix.exs`:
 
 ## Installation
 ```elixir
